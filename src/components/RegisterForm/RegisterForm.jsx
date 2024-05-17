@@ -3,6 +3,8 @@ import { useId } from "react";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
+import css from '../RegisterForm/RegisterForm.module.css'
+
 
 export default function RegisterForm() {
 
@@ -20,6 +22,7 @@ const schema = Yup.object().shape({
   password: Yup.string().min(7, "Too short").max(256, "Too long").required("Required"),
 });
     
+    
     const nameFieldId = useId();
     const emailFieldId = useId();
     const passFieldId = useId();
@@ -32,26 +35,26 @@ const schema = Yup.object().shape({
     
     return (
         <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={schema}>
-            <Form>
-<div>
-    <label htmlFor={nameFieldId}>Your name</label>
-    <Field type='text' name='name' id={nameFieldId}></Field>
-    <ErrorMessage name='name' as="span"></ErrorMessage>
+            <Form className={css.container}>
+<div className={css.inputCont}>
+    <label className={css.inputLabel} htmlFor={nameFieldId}>Ваше ім'я</label>
+    <Field className={css.inputField} type='text' name='name' id={nameFieldId}></Field>
+    <ErrorMessage className={css.error} name='name' as="span"></ErrorMessage>
     </div>
 
-<div>
-    <label htmlFor={emailFieldId}>Email</label>
-    <Field type='email' name='email' id={emailFieldId}></Field>
-    <ErrorMessage name='email' as="span"></ErrorMessage>
+<div className={css.inputCont}>
+    <label className={css.inputLabel} htmlFor={emailFieldId}>Email</label>
+    <Field className={css.inputField} type='email' name='email' id={emailFieldId}></Field>
+    <ErrorMessage className={css.error} name='email' as="span"></ErrorMessage>
     </div>
 
-<div>
-    <label htmlFor={passFieldId}>Password</label>
-    <Field type='text' name='password' id={passFieldId}></Field>
-    <ErrorMessage name='password' as="span"></ErrorMessage>
+<div className={css.inputCont}>
+    <label className={css.inputLabel} htmlFor={passFieldId}>Password</label>
+    <Field className={css.inputField} type='text' name='password' id={passFieldId}></Field>
+    <ErrorMessage className={css.error} name='password' as="span"></ErrorMessage>
                 </div>
                 
-                <button type="submit">Submit</button>
+                <button className={css.btnForm} type="submit">Відправити</button>
             </Form>
       </Formik>
   )

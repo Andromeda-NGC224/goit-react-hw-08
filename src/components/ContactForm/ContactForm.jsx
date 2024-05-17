@@ -33,18 +33,18 @@ export default function ContactForm() {
         <Formik initialValues={initialValues} validationSchema={FormSchema} onSubmit={handleSubmit}>
             <Form className={css.container}> 
                 <div className={css.inputCont}>
-                    <label className={css.inputLabel} htmlFor={nameField}>Name</label>
+                    <label className={css.inputLabel} htmlFor={nameField}>Ім'я</label>
                     <Field className={css.inputField} name="name" type="text" id={nameField}></Field>
                     <ErrorMessage className={css.error} name="name" component="span"/>
                 </div>
 
                 <div className={css.inputCont}>
-                    <label className={css.inputLabel} htmlFor={numberField}>Number</label>
+                    <label className={css.inputLabel} htmlFor={numberField}>Номер телефону</label>
                     <Field className={css.inputField} name="number" type="text" id={numberField}></Field>
                     <ErrorMessage className={css.error} name="number" component="span"/>
                 </div>
 
-                <button className={css.btnForm} type="submit">Add contact</button>
+                <button className={css.btnForm} type="submit">Додати контакт</button>
             </Form>
 </Formik>
     )

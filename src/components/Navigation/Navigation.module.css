@@ -1,0 +1,8 @@
+.navLinkCont {
+  display: flex;
+  gap: 12px;
+}
+.navLink:hover {
+  color: rgb(43, 43, 43);
+  text-decoration: underline;
+}

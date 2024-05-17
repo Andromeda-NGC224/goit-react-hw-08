@@ -17,7 +17,7 @@ export default function Contact({ name, number, id }) {
                 
             </div>
             
-            <button className={css.contBtn} onClick={() => dispatch(deleteContact(id))}>Delete</button>
+            <button className={css.contBtn} onClick={() => dispatch(deleteContact(id))}>Видалити</button>
     </>
 )
 }

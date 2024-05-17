@@ -1,0 +1,17 @@
+.navLinkCont {
+  display: flex;
+  gap: 12px;
+  font-size: 20px;
+}
+.navLinkBtn {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 100px;
+  box-sizing: border-box;
+  height: 25px;
+  cursor: pointer;
+}
+.navLinkBtn:hover {
+  color: #fff;
+  background-color: rgb(109, 109, 109);
+}

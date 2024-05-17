@@ -1,11 +1,12 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import css from '../AuthNav/AuthNav.module.css'
 
 
 export default function AuthNav() {
     return (
-        <div>
-            <NavLink to='/login'>Login</NavLink>
-            <NavLink to='/register'>Register</NavLink>
+        <div className={css.navLinkCont}>
+            <NavLink className={css.navLink} to='/login'>Увійти</NavLink>
+            <NavLink className={css.navLink} to='/register'>Зареєструватися</NavLink>
       </div>
   )
 }
