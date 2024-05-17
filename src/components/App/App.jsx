@@ -10,18 +10,17 @@ import Loader from '../Loader/Loader'
 import RestrictedRoute from '../RestrictedRoute'
 import PrivatedRoute from '../PrivateRoute'
 
-import HomePage from '../../pages/HomePage/HomePage'
-import ContactsPage from '../../pages/ContactsPage/ContactsPage'
-import LoginPage from '../../pages/LoginPage/LoginPage'
-import RegistrationPage from '../../pages/RegistrationPage/RegistrationPage'
+const HomePage = lazy(()=> import(`../../pages/HomePage/HomePage`))
+const ContactsPage = lazy(()=> import(`../../pages/ContactsPage/ContactsPage`))
+const LoginPage = lazy(()=> import(`../../pages/LoginPage/LoginPage`))
+const RegistrationPage = lazy(() => import(`../../pages/RegistrationPage/RegistrationPage`))
 
 
 
 export default function App() {
-  
-  const isRefreshing = useSelector(selectIsRefreshing)
   const dispatch = useDispatch()
-  
+  const isRefreshing = useSelector(selectIsRefreshing)
+
   useEffect(() => {
     dispatch(refreshUser())
   }, [dispatch]);
