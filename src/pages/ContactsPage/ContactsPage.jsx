@@ -14,10 +14,10 @@ export default function ContactPage() {
 
   const dispatch = useDispatch()
 
+
   useEffect(() => {
     dispatch(fetchContacts())
   }, [dispatch]);
-
 
 
   return (

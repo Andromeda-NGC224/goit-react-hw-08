@@ -1,6 +1,10 @@
+
 import css from "../HomePage/HomePage.module.css";
 
+
 export default function HomePage() {
+  
+ 
   return (
     <div className={css.homeCont}>
       <h1 className={css.title}>Ласкаво просимо до PhoneBook!</h1>
