@@ -1,4 +1,4 @@
-import RegisterForm from "../../components/RegisterForm/RegisterForm";
+import RegisterForm from "../../components/RegistrationForm/RegistrationForm";
 import css from '../RegistrationPage/RegistrationPage.module.css'
 
 export default function RegistrationPage() {
